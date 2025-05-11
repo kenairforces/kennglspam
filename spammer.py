@@ -41,4 +41,3 @@ def start_multi_spam(username, messages, duration, thread_count=5):
 def stop_spam():
     global stop_flag
     stop_flag = True
-    print("Spamming stopped!")
