@@ -1,0 +1,131 @@
+/* THEME ROOT */
+:root {
+  --bg: #ffffff;
+  --text: #111111;
+  --input-bg: #f2f2f2;
+  --border: #cccccc;
+  --start: #28a745;
+  --start-hover: #218838;
+  --stop: #dc3545;
+  --stop-hover: #c82333;
+}
+
+[data-theme="dark"] {
+  --bg: #121212;
+  --text: #f0f0f0;
+  --input-bg: #1e1e1e;
+  --border: #333;
+  --start: #28a745;
+  --start-hover: #218838;
+  --stop: #dc3545;
+  --stop-hover: #c82333;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.container {
+  background: var(--bg);
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 400px;
+  box-sizing: border-box;
+  transition: background 0.3s, color 0.3s;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.toggle-btn {
+  font-size: 18px;
+  padding: 5px 10px;
+  background: none;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.toggle-btn:hover {
+  opacity: 0.8;
+}
+
+.subtitle {
+  font-size: 13px;
+  margin-bottom: 18px;
+}
+
+.subtitle a {
+  color: var(--start);
+  text-decoration: none;
+}
+
+form input {
+  width: 100%;
+  padding: 10px;
+  margin: 8px 0;
+  background: var(--input-bg);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  font-size: 14px;
+  color: var(--text);
+  transition: background 0.3s;
+}
+
+.buttons {
+  display: flex;
+  gap: 10px;
+  margin-top: 12px;
+  width: 100%;            /* full lebar */
+}
+
+.btn {
+  flex: 1;
+  padding: 12px;
+  font-size: 14px;
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+  color: #fff;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.start {
+  background-color: var(--start);
+}
+
+.start:hover {
+  background-color: var(--start-hover);
+}
+
+.stop {
+  background-color: var(--stop);
+}
+
+.stop:hover {
+  background-color: var(--stop-hover);
+}
+
+footer {
+  margin-top: 20px;
+  font-size: 12px;
+  text-align: center;
+  color: var(--text);
+}
+

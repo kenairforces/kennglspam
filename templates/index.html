@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>NGL Web Spammer by Kenairforces</title>
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+  <div class="container">
+  <header>
+    <h1>NGL Web Spammer</h1>
+    <button id="themeToggle" class="toggle-btn" title="Toggle dark/light">🌓</button>
+  </header>
+
+    <p class="subtitle">Built by <a href="https://github.com/kenairforces" target="_blank">Kenairforces</a></p>
+
+<!-- FORM MULAI -->
+      <form method="POST">
+        <input type="text" name="username" placeholder="https://ngl.link/username" required>
+        <input type="text" name="messages" placeholder="Pesan (pisah pakai koma)" required>
+        <input type="number" name="duration" placeholder="Durasi dalam detik" required>
+        <input type="number" name="threads" placeholder="Jumlah thread (default 5)" value="5">
+
+      <div class="buttons">
+    <button type="submit" name="start" class="btn start">🚀 MULAI</button>
+  </div>
+</form>
+
+<!-- FORM STOP TERPISAH -->
+<form method="POST">
+  <div class="buttons">
+    <button type="submit" name="stop" class="btn stop">🛑 STOP</button>
+  </div>
+</form>
+
+
+    <footer>
+      <p>© 2025 <strong>Kenairforces</strong> — <a href="https://github.com/kenairforces" target="_blank">GitHub Repo</a></p>
+    </footer>
+  </div>
+  <script src="/static/toggle.js"></script>
+</body>
+</html>
