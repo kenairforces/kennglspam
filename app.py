@@ -1,26 +1,15 @@
-from flask import Flask, render_template, request, redirect, send_from_directory
+from flask import Flask, render_template, request, redirect
 import threading
-import os
 from spammer import start_multi_spam, stop_spam
 
 app = Flask(__name__)
 spam_thread = None
-
-@app.route('/favicon.ico')
-def favicon():
-    return send_from_directory(
-        os.path.join(app.root_path, 'static'),
-        'favicon.ico', mimetype='image/vnd.microsoft.icon'
-    )
 
 @app.route('/', methods=['GET', 'POST'])
 def index():
     global spam_thread
     if request.method == 'POST':
         if 'start' in request.form:
-            if spam_thread and spam_thread.is_alive():
-                return redirect('/')  # Thread sudah jalan, skip restart
-
             user = request.form['username'].strip().replace("https://ngl.link/", "")
             msg = [m.strip() for m in request.form['messages'].split(',') if m.strip()]
             dur = int(request.form['duration'])
